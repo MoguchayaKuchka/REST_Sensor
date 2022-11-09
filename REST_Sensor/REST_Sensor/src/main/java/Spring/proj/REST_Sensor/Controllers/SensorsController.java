@@ -48,7 +48,7 @@ public class SensorsController {
         sensorService.register(sensorToAdd);
         return ResponseEntity.ok(HttpStatus.OK);
     }
-
+    @ExceptionHandler
     private ResponseEntity<MeasurementErrorResponse> handleException(MeasurementException e)
     {
         MeasurementErrorResponse response = new MeasurementErrorResponse(
